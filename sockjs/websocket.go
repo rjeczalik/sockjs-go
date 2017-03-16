@@ -83,6 +83,7 @@ func (w *wsReceiver) close() {
 		close(w.closeCh)
 	}
 }
+
 func (w *wsReceiver) canSend() bool {
 	select {
 	case <-w.closeCh: // already closed
