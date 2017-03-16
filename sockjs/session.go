@@ -148,8 +148,7 @@ func (s *session) heartbeat() {
 }
 
 func (s *session) accept(messages ...string) error {
-	s.recvBuffer.push(messages...)
-	return nil
+	return s.recvBuffer.push(messages...)
 }
 
 // idempotent operation
